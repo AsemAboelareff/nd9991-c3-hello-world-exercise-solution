@@ -1,2 +1,2 @@
 [all]
-3.228.17.76
+ansible_connection=local
