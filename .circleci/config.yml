@@ -37,7 +37,7 @@ jobs:
             fingerprints: ["	58:66:06:90:9d:83:75:5e:e3:06:b2:ac:96:b8:7c:46"] 
         - run:
             name: Install Ansible
-            yum: |
+            command: |
               sudo yum install ansible
         - run:
             name: Run Playbook and Configure server
