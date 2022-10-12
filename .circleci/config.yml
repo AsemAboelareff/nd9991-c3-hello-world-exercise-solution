@@ -68,11 +68,12 @@ jobs:
             command: | 
               cat ~/inventory.txt
         - run:
-            name: ls
-            command: ls ~/
+            name: cat project/inventory
+            command: | 
+              cat ~/project/inventory.txt      
         - run:
             name: ls
-            command: /root/project      
+            command: ls ~/      
         - run:
             name: Run Playbook and Configure server
             command: | 
