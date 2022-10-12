@@ -10,7 +10,7 @@ orbs:
 jobs:
   create_infrastructure: 
       docker:
-        - image: pipelinecomponents/ansible-lint
+        - image: amazon/aws-cli
       steps:
         - checkout
         - run:
