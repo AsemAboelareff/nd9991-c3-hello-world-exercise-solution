@@ -68,7 +68,7 @@ jobs:
               cat ~/inventory.txt
         - run:
             name: ls
-            command: ls /tmp        
+            command: find / -name inventory.txt        
         - run:
             name: Run Playbook and Configure server
             command: | 
