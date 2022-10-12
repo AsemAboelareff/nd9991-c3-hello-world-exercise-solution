@@ -103,7 +103,7 @@ jobs:
               fi           
         - destroy_environment
 workflows:
-  my_workflow:
+  project3tests:
     jobs:
       - create_infrastructure
       - configure_infrastructure:
