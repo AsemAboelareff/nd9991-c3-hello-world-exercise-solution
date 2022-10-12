@@ -85,6 +85,7 @@ jobs:
             command: | 
               ansible-playbook -i ~/project/inventory.txt main1.yml            
            
+
   smoke_test:
       docker:
         - image: alpine:latest
