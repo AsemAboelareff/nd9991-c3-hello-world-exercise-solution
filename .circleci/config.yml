@@ -83,8 +83,7 @@ jobs:
         - run:
             name: Run Playbook and Configure server
             command: | 
-              ansible-playbook -i ~/project/inventory.txt main1.yml      
-        - destroy_environment      
+              ansible-playbook -i ~/project/inventory.txt main1.yml            
            
   smoke_test:
       docker:
