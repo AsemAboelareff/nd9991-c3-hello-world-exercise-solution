@@ -31,7 +31,8 @@ jobs:
                 --template-file template.yml \
                 --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
                 --region us-east-1
-        - run: echo "[all]" > ~/inventory.txt    
+        - run: echo "[all]" > ~/inventory.txt
+        - run: echo "[all]" > ~/workspace-test.txt    
         - persist_to_workspace:
             root: ~/  
             paths:
@@ -71,14 +72,19 @@ jobs:
             command: ls ~/  
         - run:
             name: ls
-            command: ls /root
+            command: find / -name workspace-test.txt
         - run:
             name: ls
             command: /root/project      
         - run:
             name: Run Playbook and Configure server
             command: | 
-              ansible-playbook -i inventory.txt main1.yml
+              ansible-playbook -i ~/inventory.txt main1.yml
+        - run:
+            name: Run Playbook and Configure server
+            command: | 
+              ansible-playbook -i ~/project/inventory.txt main1.yml      
+        - destroy_environment      
            
   smoke_test:
       docker:
