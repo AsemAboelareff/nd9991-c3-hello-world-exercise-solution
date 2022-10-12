@@ -25,9 +25,10 @@ jobs:
                 --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
                 --region us-east-1
         - persist_to_workspace:
-            root: /
-            paths: 
-              - inventory.txt   
+            root: /  
+        - run:
+            name: ls
+            command: ls
         - run:
             name: append IP to inventory
             command: |      
