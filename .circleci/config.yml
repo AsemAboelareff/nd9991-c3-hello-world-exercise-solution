@@ -66,18 +66,11 @@ jobs:
         - run:
             name: cat inventory
             command: | 
-              cat ~/inventory.txt
-        - run:
-            name: cat project/inventory
-            command: | 
-              cat ~/project/inventory.txt      
-        - run:
-            name: ls
-            command: ls ~/      
+              cat inventory.txt     
         - run:
             name: Run Playbook and Configure server
             command: | 
-              ansible-playbook -i ~/inventory.txt main1.yml
+              ansible-playbook -i inventory.txt main1.yml
         - run:
             name: Run Playbook and Configure server
             command: | 
