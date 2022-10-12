@@ -69,10 +69,7 @@ jobs:
               cat ~/inventory.txt
         - run:
             name: ls
-            command: ls ~/  
-        - run:
-            name: ls
-            command: sudo find / -name workspace-test.txt
+            command: ls ~/
         - run:
             name: ls
             command: /root/project      
